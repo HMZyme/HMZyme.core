@@ -113,7 +113,6 @@ graph TD
         Dash[Dashboard]
     end
 
-    % User flow
     UI -->|User uploads FASTA| API
     API -->|Send files| Uploader
     Uploader --> Validator
@@ -122,14 +121,12 @@ graph TD
     Preprocessor --> HMMWorker2
     Preprocessor --> HMMWorker3
 
-    % Processing flow
     HMMWorker1 --> ResultAggregator
     HMMWorker2 --> ResultAggregator
     HMMWorker3 --> ResultAggregator
     ResultAggregator --> DB
     ResultAggregator --> Storage
 
-    % Reporting
     DB --> ReportGen
     Storage --> ReportGen
     ReportGen --> Dash
