@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hmzyme"
+dynamic = ["version"]
+readme = "README.md"
+description = "HMZyme - Microservices for Gene Search in Biogeochemical Cycles."
+license = {text = "GPL-3.0-or-later"}
+
+dependencies = [
+  'pyhmmer',
+  'pillow'
+]
+
+[project.scripts]
+hmzyme = "hmzyme.__main__:main"
+hmzyme_visualisation = "hmzyme.visualisation:main"
+
+[tool.setuptools]
+packages = ['hmzyme', 'hmzyme.hmm_databases', 'hmzyme.templates']
+package-dir = {'hmzyme'= 'hmzyme', 'hmzyme.hmm_databases' = 'hmzyme/hmm_databases', 'hmzyme.templates' = 'hmzyme/templates'}
+package-data = {'hmzyme.hmm_databases'= ['*.zip', '*.tsv', '*.md'], 'hmzyme.templates' = ['*.png']}
+
+[tool.setuptools.dynamic]
+version = { attr = "hmzyme.__version__" }
+dependencies = {file = ["requirements.txt"]}

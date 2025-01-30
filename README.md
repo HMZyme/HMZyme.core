@@ -2,7 +2,7 @@
 
 ## 🧬 Overview
 
-HMZyme is a cutting-edge microservices-based system designed to **decode the genetic blueprint of biogeochemical cycles**. By leveraging powerful **HMM-based analysis** and integrating data from **METABOLIC, KEGG, PFAM, and TIGR**, HMZyme enables researchers to rapidly and accurately **identify genes in protein sequence FASTA files.**
+HMZyme is a cutting-edge microservices-based system designed to **decode the genetic blueprint of biogeochemical cycles**. By leveraging powerful **HMM-based analysis** and integrating data from **HMZyme.core, KEGG, PFAM, and TIGR**, HMZyme enables researchers to rapidly and accurately **identify genes in protein sequence FASTA files.**
 
 ---
 
@@ -142,7 +142,7 @@ graph TD
 - **Sequence Uploader**: Handles file uploads and storage.
 - **FASTA Validator**: Ensures correct format before processing.
 - **Data Preprocessor**: Prepares sequences for HMM-based search.
-- **HMM Search Engine Workers**: Process sequences using KEGG, METABOLIC, PFAM, and TIGR models.
+- **HMM Search Engine Workers**: Process sequences using KEGG, HMZyme.core, PFAM, and TIGR models.
 - **Result Aggregator**: Combines results from multiple HMM searches.
 - **Database & File Storage**: Stores processed sequences and search results.
 - **Report Generator**: Creates readable reports.
